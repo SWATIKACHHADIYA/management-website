@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --main-color:#119ab8;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,0.7);
+    --light-bg:#eee;
+    --border :.1rem solid rgba(0,0,0);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,0.3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0; outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+@keyframes FadeIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    color: var(--black);
+    display: block;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+section{
+    padding: 5rem 10%;
+}
+.message{
+    padding:2rem;
+    margin: 1rem 0;
+    display: block;
+    background-color: var(--main-color);
+    color: var(--white);
+    border-radius: .5rem;
+    font-size: 2rem !important;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    background: #acb6aecf;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    color: var(--black);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--black);
+    color: var(--white);
+
+}
+.header{
+    position: sticky;
+    z-index: 1000;
+    top: 0; left: 0; right: 0;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    background: var(--main-color) !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+
+}
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.header .navbar a{
+    margin-left: 2rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+.header .navbar a:hover{
+    color: var(--light-bg);
+}
+ 
+#menu-btn{
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+ .image{
+    padding: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+}
+.image h1{
+    font-size: 4rem;
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+    z-index: 1000;
+    animation: FadeIn .4s linear backwards .2s;
+    text-align: center;
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.about .image{
+    flex: 1 1 42rem;
+}
+.about .image img{
+    width: 100%;
+    height: 100%;
+}
+.about .content{
+    flex: 1 1 42rem;
+    padding: 3rem;
+    background: var(--light-bg);
+}
+.about .content h1{
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    padding: 1rem 0;
+    line-height: 2;
+    text-align: justify;
+}
+.teachers .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem;
+}
+.teachers .box-container .box{
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   background: var(--main-color);
+}
+.teachers .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+}
+.teachers .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.teachers .box-container .box p{
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 2;
+}
+.courses .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem;
+}
+.courses .box-container .box{
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   background: var(--light-bg);
+}
+.courses .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+}
+.courses .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.courses .box-container .box p{
+    padding: 2rem;
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5px;
+    line-height: 2;
+}
+.form{
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: .5rem;
+    margin: 0 auto;
+    max-width: 50rem;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+.form .box{
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem 1.4rem;
+    color: var(--black);
+    text-transform: none;
+    border: var(--border);
+}
+.form span{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.form .btn{
+    background: var(--main-color);
+    color: var(--black);
+}
+.form .btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+footer{
+    background-color: var(--black);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    bottom: 0;right: 0;left: 0;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    text-transform: capitalize;
+
+}
+footer h2{
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+    color: var(--light-white);
+}
+footer h2 span{
+    color: var(--main-color);
+}
+.form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../image/background.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-container form{
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 50rem;
+    box-shadow: var(--box-shadow);
+    background: var(--light-white);
+     text-align: center;
+}
+
+.form-container form h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+.form-container form .box{
+ width: 100%;
+ padding: 1.2rem 1.4rem;
+ font-size: 1.7rem;
+ margin: .8rem 0;
+ background: var(--white);
+
+}
+.form-container form select option{
+    background: var(--light-white);
+}
+.form-container form .btn{
+    width: 100%;
+    background: var(--main-color);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 2rem;
+    margin: .8rem 0;
+    text-transform: capitalize;
+} 
+.form-container form .btn:hover{
+    background-color:var(--black);
+    color: var(--white);
+}
+.form-container form p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+.form-container form p a{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.form-container form p a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+
+@media (max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width:991px){
+    section{
+        padding: 3rem 2rem;
+    }
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;left: 0;right: 0;
+        background-color: var(--main-color);
+        border-top: var(--border);
+        padding: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    .header .navbar .btn{
+        background: none;
+        border: none;
+        box-shadow: none;
+    
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .image h1{
+        font-size: 3.5rem;
+    }
+
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .image h1{
+        font-size: 3rem;
+    }
+}
